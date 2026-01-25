@@ -1,13 +1,72 @@
-\documentclass{article}[11pt]
+% TODOs: how to check LaTeX documentation inside of VS Code?
+% how to use keyboard shortcuts, e.g CTRL+B -> textbf
+\documentclass[12pt,a4paper]{article}
 
-\title{Nemecká gramatika}
+% -------------------------------------------------
+% Language and encoding
+% -------------------------------------------------
+\usepackage[T1]{fontenc}
+% \usepackage[utf8]{inputenc} not needed with modern LaTeX
+\usepackage[slovak, german]{babel}
+
+% -------------------------------------------------
+% Packages
+% -------------------------------------------------
+\usepackage{xcolor} % needed to switch text color also in commands
+
+
+% -------------------------------------------------
+% Custom commands for language separation
+% -------------------------------------------------
+\newcommand{\DE}[1]{%
+  \selectlanguage{german}#1\selectlanguage{slovak}
+}
+
+\newcommand{\SK}[1]{%
+  \textcolor{gray}{\selectlanguage{slovak}#1}
+}
+
+
+\newenvironment{beispiel}
+{%
+  \par\smallskip
+  \noindent\textbf{Beispiel:}
+  \begin{list}{}{\leftmargin=1.5em}
+  \item[]
+}
+{%
+  \end{list}
+  \par\smallskip
+}
+
+
+\title{Deutsche Grammatik}
 \author{Juraj Paška}
 
 \begin{document}
 
 \maketitle
+\tableofcontents
 
-\section*{Introduction}
+
+\section*{Die Einleitung}
+Meine Notizen zur deutschen Grammatik. Die slovakische Übersetzung ist in Grau geschrieben. 
+Beispiel: \SK{Toto je príklad slovenskej vety.} 
+
+\section{Pasiv} 
+Das Passiv bildet man mit werden + Partizip Perfekt. 
+Beim Passiv ist die Aktion wichtiger als die Person.
+
+\begin{beispiel}
+    \begin{description}
+        \item[Aktiv:] Der Mechaniker montiert den Motor. (Subjekt: der Mechaniker)
+        \item[Passiv:] Der Motor wird montiert. (Subjekt: der Motor)
+    \end{description}
+  
+\end{beispiel}
+
+Das Akkusativ-Objekt aus dem Aktivsatz wird zum Subjekt im Passivsatz. Das Subjekt aus dem Aktivsatz nennt man meistens nicht. 
+Man kann es mit \emph{von+Dativ} ergänzen \footnote{Grammatik Aktiv A1-B1.}. 
 
 
 
