@@ -12,9 +12,15 @@
 % -------------------------------------------------
 % Packages
 % -------------------------------------------------
+\usepackage{booktabs}
 \usepackage{xcolor} % needed to switch text color also in commands
-
-
+\usepackage{hyperref} % must go last
+%\hypersetup{
+%  colorlinks=true, % Enable colored links
+%  linkcolor=blue,  % Color for internal links
+%  citecolor=blue,  % Color for citations
+%  urlcolor=blue    % Color for URLs
+%}
 % -------------------------------------------------
 % Custom commands for language separation
 % -------------------------------------------------
@@ -47,13 +53,14 @@
 
 \maketitle
 \tableofcontents
+\listoftables
 
 
 \section*{Die Einleitung}
 Meine Notizen zur deutschen Grammatik. Die slovakische Übersetzung ist in Grau geschrieben. 
 Beispiel: \SK{Toto je príklad slovenskej vety.} 
 
-\section{Pasiv} 
+\section{Passiv} 
 Das Passiv bildet man mit werden + Partizip Perfekt. 
 Beim Passiv ist die Aktion wichtiger als die Person.
 
@@ -65,9 +72,52 @@ Beim Passiv ist die Aktion wichtiger als die Person.
   
 \end{beispiel}
 
-Das Akkusativ-Objekt aus dem Aktivsatz wird zum Subjekt im Passivsatz. Das Subjekt aus dem Aktivsatz nennt man meistens nicht. 
-Man kann es mit \emph{von+Dativ} ergänzen \footnote{Grammatik Aktiv A1-B1.}. 
+Deklinierung von \emph{werden} kann man in der Tabelle~\ref{tab:werden} nachschauen.
 
+\begin{table}[htbp]
+\caption{Konjugation des Verbs \emph{werden} im Präsens}
+\label{tab:werden}
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Person} & \textbf{Form von \emph{werden}} \\
+    \midrule
+    ich & werde \\
+    du & wirst \\
+    er / sie / es & wird \\
+    wir & werden \\
+    ihr & werdet \\
+    sie / Sie & werden \\
+    \bottomrule
+  \end{tabular}  
+\end{table}
+
+Das Akkusativ-Objekt aus dem Aktivsatz wird zum Subjekt im Passivsatz. Das Subjekt aus dem Aktivsatz nennt man meistens nicht. 
+Man kann es mit \emph{von+Dativ} ergänzen\footnote{Grammatik Aktiv A1-B1.}. 
+
+\subsection{Passiv mit Modalverben}
+\subsection{Vorgangspassiv, Zustandspassiv}
+
+\section{Partizip 2}
+Das Partizip 2 wird für die Bildung der zusammengesetzten Zeiten (Perfekt, Plusquamperfekt, Futur II) und des Passivs verwendet.
+\SK{Je to príčastie minulé. Príčastie prítomne je Partizip 1 -- prechodník (tacnujúc - tanzend, spievajúc - singend)}
+
+\subsection{Bildung von Partizip 2}
+\textbf{Regelmäßige Verben}
+\begin{itemize}
+    \item Verben auf -en: ge + Stamm + t (machen - gemacht)
+    \item Verben auf -eln/-ern: Stamm + t (handeln - gehandelt, ändern - geändert)
+    \item Verben auf -ieren: Stamm + t (studieren - studiert)
+    \item Verben auf -n: Stamm + en (atmen - geatmen)
+\end{itemize}
+\textbf{Unregelmäßige Verben}
+\begin{itemize}
+    \item Verben mit Vokalwechsel: ge + Stamm (mit Vokalwechsel) + en (fahren - gefahren, sehen - gesehen)
+    \item Verben auf -inden: ge + Stamm + unden (finden - gefunden, schwinden - geschwunden)
+    \item Verben auf -nehmen: ge + Stamm + ommen (nehmen - genommen, aufnehmen - aufgenommen)
+    \item Verben auf -geben: ge + Stamm + eben (geben - gegeben, vergeben - vergeben)
+    \item Verben auf -stehen: ge + Stamm + anden (stehen - gestanden, verstehen - verstanden)
+\end{itemize}
+\textbf{Untrennbare Verben} kein ge + Stamm + t (verstehen - verstanden)
 
 
 \end{document}
