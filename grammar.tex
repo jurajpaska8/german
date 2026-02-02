@@ -13,6 +13,8 @@
 % Packages
 % -------------------------------------------------
 \usepackage{booktabs}
+\usepackage{threeparttable} % for table notes
+\usepackage[tableposition=top]{caption} % caption above tables with proper spacing
 \usepackage{xcolor} % needed to switch text color also in commands
 \usepackage{hyperref} % must go last
 %\hypersetup{
@@ -33,10 +35,10 @@
 }
 
 
-\newenvironment{beispiel}
+\newenvironment{beispiel}[1][]
 {%
   \par\smallskip
-  \noindent\textbf{Beispiel:}
+  \noindent\textbf{Beispiel\ifx&#1&\else: #1\fi}
   \begin{list}{}{\leftmargin=1.5em}
   \item[]
 }
@@ -61,20 +63,27 @@ Meine Notizen zur deutschen Grammatik. Die slovakische Übersetzung ist in Grau 
 Beispiel: \SK{Toto je príklad slovenskej vety.} 
 
 \section{Passiv} 
-Das Passiv bildet man mit werden + Partizip Perfekt. 
-Beim Passiv ist die Aktion wichtiger als die Person.
+Das Passiv bildet man mit werden + Partizip Perfekt. Beim Passiv ist die Aktion wichtiger als die Person.
 
-\begin{beispiel}
+\begin{beispiel}[Passiv 1]
     \begin{description}
         \item[Aktiv:] Der Mechaniker montiert den Motor. (Subjekt: der Mechaniker)
         \item[Passiv:] Der Motor wird montiert. (Subjekt: der Motor)
     \end{description}
-  
+\end{beispiel}
+\begin{beispiel}[Passiv 2]
+    \begin{description}
+        \item[Aktiv:] Der Reiseleiter informiert die Gruppe. (Subjekt--Täter: der Reiseleiter)
+        \item[Passiv:] Die Gruppe wird (vom Reiseleiter) informiert. (Subjekt: die Gruppe, Täter: der Reiseleiter)
+    \end{description}
 \end{beispiel}
 
-Deklinierung von \emph{werden} kann man in der Tabelle~\ref{tab:werden} nachschauen.
+In einem Passivsatz sind Subjekt und Täter verschieden. Der ,,Täter'' ist die Person, die die Aktion ausführt und kann weggelassen werden.
+Das Akkusativ-Objekt aus dem Aktivsatz wird zum Subjekt im Passivsatz. Das Subjekt aus dem Aktivsatz nennt man meistens nicht. 
+Man kann es mit \emph{von+Dativ} ergänzen\footnote{Grammatik Aktiv A1-B1.}. Deklinierung von \emph{werden} kann man in der Tabelle~\ref{tab:werden} nachschauen.
 
 \begin{table}[htbp]
+\centering
 \caption{Konjugation des Verbs \emph{werden} im Präsens}
 \label{tab:werden}
   \begin{tabular}{ll}
@@ -91,8 +100,37 @@ Deklinierung von \emph{werden} kann man in der Tabelle~\ref{tab:werden} nachscha
   \end{tabular}  
 \end{table}
 
-Das Akkusativ-Objekt aus dem Aktivsatz wird zum Subjekt im Passivsatz. Das Subjekt aus dem Aktivsatz nennt man meistens nicht. 
-Man kann es mit \emph{von+Dativ} ergänzen\footnote{Grammatik Aktiv A1-B1.}. 
+Dort gibt es auch andere Zeitformen des Passivs. Diese werden mit den entsprechenden Zeitformen von \emph{werden} gebildet. 
+Sehe Tabelle~\ref{tab:passivzeiten}.
+
+\begin{table}[htbp]
+\centering
+\caption{Zeitformen des Passivs}
+\label{tab:passivzeiten}
+  \begin{threeparttable}
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Zeitform} & \textbf{Beispiel} \\
+    \midrule
+    Präsens & Der Motor wird repariert. \\
+    Präteritum & Der Motor wurde repariert. \\
+    Perfekt & Der Motor ist repariert worden. \\
+    Plusquamperfekt & Der Motor war repariert worden. \\
+    Futur I* & Der Motor wird repariert werden. \\
+    Futur II & Der Motor wird repariert worden sein. \\
+    Konjuktiv 2 Gegenwart & Der Motor würde repariert. \\
+    Konjuktiv 2 Vergangenheit & Der Motor wäre repariert worden. \\ 
+    Konjuktiv 1 Gegenwart & Der Motor werde repariert. \\
+    Konjuktiv 1 Vergangenheit & Der Motor sei repariert worden. \\ 
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \footnotesize
+  \item \emph{*} Diese Form wird nur sehr selten verwendet. 
+  \item Quelle: \emph{Grammatik Aktiv B2-C1, 42}
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}
 
 \subsection{Passiv mit Modalverben}
 \subsection{Vorgangspassiv, Zustandspassiv}
